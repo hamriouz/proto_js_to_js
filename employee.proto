@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package employee;
+
+// a service called employee creates a function (rpc) called getDetail which accepts input of type EmployeeRequest
+// and provides response in the format EmployeeResponse
+service Employee {
+
+  rpc getDetails (EmployeeRequest) returns (EmployeeResponse) {}
+}
+
+
+message EmployeeRequest {
+  int32 id = 1;
+}
+
+message EmployeeResponse{
+  EmployeeDetails message = 1;
+}
+message EmployeeDetails {
+  int32 id = 1;
+  string email = 2;
+  string firstName = 3;
+  string lastName = 4;
+}
