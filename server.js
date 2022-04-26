@@ -54,4 +54,4 @@ function main() {
     server.start();
 }
 
-main()
+main();
